@@ -1,0 +1,27 @@
+:root {
+  --shanghai-green: #5dd782;
+  --shanghai-green-dark: #49b56a;
+  --shanghai-green-light: #67ee90;
+  --shanghai-gray: #333333;
+  --shanghai-gray-light: #eeeeee;
+  --shanghai-white: #ffffff;
+}
+
+@font-face {
+  font-family: arial-narrow;
+  src: url("../fonts/arial-narrow.ttf");
+}
+
+body {
+    margin: 0;
+    width: 100%;
+
+    scroll-behavior: smooth;
+    background-color: var(--shanghai-white);
+    font-family: arial-narrow, sans-serif;
+}
+
+.dark-bar {
+  display: flex;
+  justify-content: right;
+}
