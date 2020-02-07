@@ -25,7 +25,7 @@ A feladatot kétféle formában kell beadnod:
 
 2.	Netlify szolgáltatás segítségével publikált kész weblapot
 
-	a.	A Netlify egy olyan ingyenesen is használható szolgáltatás, ahol modern weblapok oszthatók meg a nyilvánossággal. A szolgáltatás úgy működik, hogy a Netlify-on létrehozott webalkalmazást egy GIT repoval (pl. GitHub, BitBucket) tudod összekapcsolni. (Vigyázz, csúnya, magyartalan mondat következik! :))  Amikor egy új  commitot push-olsz a központi repoba, akkor a Netlify ennek alapján elkészít egy új buildet, és azt azonnal ki is publikálja az app-hoz tartozó nyilvános címen. Ha csak natív HTML/CSS/JavaScript hármast használsz, akkor a build gyakorlatilag meg fog egyezni a forráskóddal, ha viszont valamilyen JS keretrendszerrel fejlesztettél (pl. React), akkor a rendszer minden szükséges műveletet elvégez, ami a publikálható formára hozáshoz szükséges. Ne ijedj meg, a dolog sokkal egyszerűbb, mint amilyennek elsőre látszik!
+	a.	A Netlify egy olyan ingyenesen is használható szolgáltatás, ahol modern weblapok oszthatók meg a nyilvánossággal. A szolgáltatás úgy működik, hogy a Netlify-on létrehozott webalkalmazást egy GIT repoval (pl. GitHub repoval) tudod összekapcsolni. (Vigyázz, csúnya, magyartalan mondat következik! :))  Amikor egy új  commitot push-olsz a központi repoba, akkor a Netlify ennek alapján elkészít egy új buildet, és azt azonnal ki is publikálja az app-hoz tartozó nyilvános címen. Ha csak natív HTML/CSS/JavaScript hármast használsz (ebben a fordulóban ez a helyzet), akkor a build gyakorlatilag meg fog egyezni a forráskóddal. Ne ijedj meg, a dolog sokkal egyszerűbb, mint amilyennek elsőre látszik!
 
 	b.	Regisztrálj egy azonosítót a Netlify-on (https://www.netlify.com/), hozz létre egy új appot a weblapod számára, válassz egy tetszőleges szabad hostnevet és kapcsold össze az appot a GitHub repoddal.
  
@@ -33,7 +33,7 @@ A feladatot kétféle formában kell beadnod:
 
 #### A feladat
 
-A feladat leírását ebben a repoban, a [WSC2021_HU_TP_S17_R1_EN_1_0.pdf](https://github.com/skillsithu/ws2021-s17-hu-r1/blob/master/WSC2021_HU_TP_S17_R1_EN_1_0.pdf) fájlban található.
+A feladat leírását ebben a repoban, a [WSC2021_HU_TP_S17_R1_EN_1_1.pdf](https://github.com/skillsithu/ws2021-s17-hu-r1/blob/master/WSC2021_HU_TP_S17_R1_EN_1_1.pdf) fájlban található.
 
 #### Határidő
 
