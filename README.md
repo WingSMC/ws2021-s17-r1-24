@@ -21,7 +21,7 @@ A feladatot kétféle formában kell beadnod:
 
 	Ha nem használtál még git-et egyáltalán, akkor legfőbb ideje, hogy megismerkedj vele. Nem egy ördöglakat, és most nem is lesz még szükséged rá, hogy nagyon elmélyülj benne. Elég, ha alapszinten megérted a működését, és az alapfunkciók használatával az elkészült munkádat feltöltöd a létrehozott repo-ba. 
 
-	Ezután a megoldásodat tartalmazó repo-t meg kell osztanod velünk. Ehhez a ws2021s17@http-foundation.hu címünket használd. Elegendő, ha READ jogosultságot kapunk.
+	Ezután a megoldásodat tartalmazó repo-t meg kell osztanod velünk. Ehhez a `skillsithu` GitHub azonosítónkat használd.
 
 2.	Netlify szolgáltatás segítségével publikált kész weblapot
 
