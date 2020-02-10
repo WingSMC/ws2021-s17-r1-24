@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./images/shanghai_park_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js"></script>
+    <base href="./">
 </head>
 <body>
     <noscript>
@@ -15,32 +16,36 @@
             This website does not function without JavaScript enabled.
         </strong>
     </noscript>
-    <nav>
-        <img src="./images/shanghai_park_logo.png" alt="">
+    <nav id="nav">
         <div class="dark-bar">
-            <p>
-            <q>The most lucrative investment I have ever made</q>+36 1 555-55555</p>
-            <p>EN | HU</p>
+            <p><q>The most lucrative investment I have ever made</q>&nbsp;&nbsp;+36 1 555-55555&nbsp;&nbsp;EN | HU</p>
         </div>
-        <div><!-- buttons -->
-            <button>THE HOUSE</button>
-            <button>FLATS</button>
-            <button>ENVIRONMENTS</button>
-            <button>GALLERY</button>
-            <button>DEVELOPER</button>
-            <button>CONTACT</button>
-            <button>MAP</button>
+        <a href=""><button class="logo"></button></a>
+        <div>
+            <a href="#nav"><button>THE HOUSE</button></a>
+            <a href="#flats"><button>FLATS</button></a>
+            <a href="#environments"><button>ENVIRONMENTS</button></a>
+            <a href="#gallery"><button>GALLERY</button></a>
+            <a href="#developer"><button>DEVELOPER</button></a>
+            <a href="#contact"><button>CONTACT</button></a>
+            <a href="#map"><button>MAP</button></a>
         </div>
     </nav>
     <header>
         <!-- parallax image -->
-        <h1>HOMES FOR LIFE</h1>
+        <div class="overlay">HOMES FOR LIFE</div>
     </header>
     <main>
         <!-- *** -->
+        <section id="flats"></section>
+        <section id="environments"></section>
+        <section id="gallery"></section>
+        <section id="developer"></section>
+        <section id="contact"></section>
+        <section id="map"></section>
     </main>
     <footer>
-        <!-- map & copy -->
+        <!-- copy & privacy policy -->
         <p>Copyright &copy; 2020 Shanghai Park</p>
         <hr>
     </footer>
