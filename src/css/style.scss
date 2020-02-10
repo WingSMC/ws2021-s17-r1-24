@@ -1,0 +1,41 @@
+// reset
+@import "vars";
+@import "header";
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: arial-narrow;
+  src: url("../fonts/arial-narrow.ttf");
+}
+
+@font-face {
+  font-family: clearlight;
+  src: url("../fonts/clearlight.ttf");
+}
+
+body {
+  margin: 0;
+  width: 100%;
+
+  scroll-behavior: smooth;
+  background-color: $shanghai-white;
+  font-family: arial-narrow, sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  body > * > * {
+    padding: 0 calc(50% - 512px);
+  }
+
+  nav {
+    height: 100px;
+  }
+}
