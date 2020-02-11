@@ -29,7 +29,7 @@ div.dark-bar {
     content: ' ';
     display: block;
     position: absolute;
-    background-color: var(--shanghai-white);
+    background-color: #ffffff;
     width: 90px;
     height: 50px;
     top: 0;
