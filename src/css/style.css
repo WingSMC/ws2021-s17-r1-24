@@ -1,3 +1,44 @@
+div.dark-bar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.logo {
+  background-image: url(../images/shanghai_park_logo.png);
+  background-size: contain;
+  width: 90px;
+  height: 50px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  position: absolute;
+  border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    height: 100px;
+  }
+  nav .logo::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    background-color: var(--shanghai-white);
+    width: 90px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    -webkit-transform: skew(-20deg);
+            transform: skew(-20deg);
+  }
+}
+
 header {
   background-image: url(../images/shanghai_park_01.jpg);
   background-position: top;
@@ -39,8 +80,8 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .pushed_in {
-    padding: 0 calc(50% - 512px);
+  .pushed-in {
+    padding: 0 calc(50% - 384px);
   }
 }
 /*# sourceMappingURL=style.css.map */

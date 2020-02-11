@@ -1,6 +1,7 @@
 @import "vars";
 
 div.dark-bar {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   background-color: $shanghai-gray;
