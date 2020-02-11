@@ -31,11 +31,7 @@ body {
 
 
 @media only screen and (min-width: 768px) {
-  body > * > * {
+  .pushed_in {
     padding: 0 calc(50% - 512px);
-  }
-
-  nav {
-    height: 100px;
   }
 }
