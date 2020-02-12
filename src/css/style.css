@@ -1,41 +1,131 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  outline: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 div.dark-bar {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background-color: #333333;
-  color: #ffffff;
+  display: none;
 }
 
 .logo {
   background-image: url(../images/shanghai_park_logo.png);
   background-size: contain;
-  width: 90px;
-  height: 50px;
   background-color: transparent;
   background-repeat: no-repeat;
   position: absolute;
   border: none;
 }
 
+nav {
+  border-bottom: red 2px solid;
+}
+
+nav div.navs button {
+  border: none;
+  height: 100%;
+  background-color: transparent;
+  color: #333333;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+nav div.navs button.active {
+  background-color: #5dd782;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+nav div.navs button:hover {
+  background-color: #49b56a;
+  color: #ffffff;
+}
+
 @media only screen and (min-width: 768px) {
-  nav {
-    height: 100px;
+  div.dark-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 30px;
+    background-color: #333333;
+    color: #ffffff;
+    line-height: 30px;
   }
-  nav .logo::before {
+  nav {
+    height: 50px;
+  }
+  nav .logo-before {
     content: ' ';
     display: block;
     position: absolute;
     background-color: #ffffff;
-    width: 90px;
-    height: 50px;
+    width: 180px;
+    height: 80px;
     top: 0;
-    left: 0;
-    -webkit-transform: skew(-20deg);
-            transform: skew(-20deg);
+    -webkit-transform: skew(-15deg) translateX(-15px);
+            transform: skew(-15deg) translateX(-15px);
+  }
+  nav .logo {
+    top: 0px;
+    height: 80px;
+  }
+  nav div.navs {
+    width: 854px;
+    float: right;
+    height: 50px;
+  }
+  nav div.navs button {
+    height: 40px;
+    margin: 5px 0;
   }
 }
 
@@ -53,11 +143,6 @@ header {
   background-color: #00000088;
   color: var(--shanghai-white);
   font-family: clearlight;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 @font-face {
@@ -81,7 +166,8 @@ body {
 
 @media only screen and (min-width: 768px) {
   .pushed-in {
-    padding: 0 calc(50% - 384px);
+    width: 100%;
+    padding: 0 calc(50% - 512px);
   }
 }
 /*# sourceMappingURL=style.css.map */

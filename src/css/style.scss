@@ -1,11 +1,10 @@
 // reset
+
+@import "reset";
+
 @import "vars";
 @import "nav";
 @import "header";
-
-* {
-  box-sizing: border-box;
-}
 
 @font-face {
   font-family: arial-narrow;
@@ -30,6 +29,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .pushed-in {
-    padding: 0 calc(50% - 384px);
+    width: 100%;
+    padding: 0 calc(50% - #{$padding / 2});
   }
 }
