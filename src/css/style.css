@@ -51,23 +51,16 @@ div.dark-bar {
 }
 
 .logo {
-  background-image: url(../images/shanghai_park_logo.png);
-  background-size: contain;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  position: absolute;
-  border: none;
-}
-
-nav {
-  border-bottom: red 2px solid;
+  height: 50px;
 }
 
 nav div.navs button {
+  margin: 5px 0;
+  height: 40px;
   border: none;
-  height: 100%;
   background-color: transparent;
   color: #333333;
+  line-height: 40px;
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
   -webkit-transition-duration: .2s;
@@ -115,6 +108,7 @@ nav div.navs button:hover {
             transform: skew(-15deg) translateX(-15px);
   }
   nav .logo {
+    position: absolute;
     top: 0px;
     height: 80px;
   }
@@ -124,8 +118,9 @@ nav div.navs button:hover {
     height: 50px;
   }
   nav div.navs button {
-    height: 40px;
-    margin: 5px 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
