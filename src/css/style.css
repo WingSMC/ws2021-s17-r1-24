@@ -51,10 +51,41 @@ div.dark-bar {
 }
 
 .logo {
-  height: 50px;
+  height: 40px;
+  margin: 15px;
 }
 
-nav div.navs button {
+nav {
+  position: relative;
+  height: 70px;
+  border-bottom: 2px solid red;
+}
+
+nav #hamburger {
+  float: right;
+  height: 40px;
+  width: 60px;
+  border: 2px solid #eeeeee;
+  border-radius: 5px;
+  background-color: transparent;
+  margin: 15px;
+  opacity: 60%;
+}
+
+nav #hamburger:focus {
+  outline: 1px solid #74d7ff;
+}
+
+nav #hamburger i {
+  font-size: 25px;
+  color: #333333;
+}
+
+nav div#navs {
+  position: absolute;
+}
+
+nav div#navs button {
   margin: 5px 0;
   height: 40px;
   border: none;
@@ -69,13 +100,13 @@ nav div.navs button {
           transition-timing-function: ease;
 }
 
-nav div.navs button.active {
+nav div#navs button.active {
   background-color: #5dd782;
   color: #ffffff;
   font-weight: bold;
 }
 
-nav div.navs button:hover {
+nav div#navs button:hover {
   background-color: #49b56a;
   color: #ffffff;
 }
@@ -94,6 +125,7 @@ nav div.navs button:hover {
     line-height: 30px;
   }
   nav {
+    position: static;
     height: 50px;
   }
   nav .logo-before {
@@ -111,16 +143,22 @@ nav div.navs button:hover {
     position: absolute;
     top: 0px;
     height: 80px;
+    margin: 0px;
   }
-  nav div.navs {
-    width: 854px;
+  nav div#navs {
+    display: block;
+    position: relative;
     float: right;
+    width: 854px;
     height: 50px;
   }
-  nav div.navs button {
+  nav div#navs button {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+  nav #hamburger {
+    display: none;
   }
 }
 
@@ -136,7 +174,7 @@ header {
 
 .overlay {
   background-color: #00000088;
-  color: var(--shanghai-white);
+  color: #ffffff;
   font-family: clearlight;
 }
 
@@ -150,7 +188,12 @@ header {
   src: url("../fonts/clearlight.ttf");
 }
 
+.hide {
+  display: none;
+}
+
 body {
+  text-rendering: optimizeLegibility;
   margin: 0;
   width: 100%;
   scroll-behavior: smooth;

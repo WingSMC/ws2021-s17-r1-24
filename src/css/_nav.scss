@@ -5,10 +5,32 @@ div.dark-bar {
 }
 
 .logo {
-  height: 50px;
+  height: 40px;
+  margin: 15px;
 }
 nav {
-  div.navs {
+  position: relative;
+  height: 70px;
+  border-bottom: 2px solid red;
+  #hamburger {
+    float: right;
+    height: 40px;
+    width: 60px;
+    border: 2px solid $shanghai-gray-light;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 15px;
+    opacity: 60%;
+    &:focus {
+      outline: 1px solid rgb(116, 215, 255);
+    }
+    i {
+      font-size: 25px;
+      color: $shanghai-gray;
+    }
+  }
+  div#navs {
+    position: absolute;
     button {
       margin: 5px 0;
       height: 40px;
@@ -44,6 +66,7 @@ nav {
     line-height: 30px;
   }
   nav {
+    position: static;
     .logo-before {
       content: ' ';
       display: block;
@@ -58,15 +81,21 @@ nav {
       position: absolute;
       top: 0px;
       height: 80px;
+      margin: 0px;
     }
     height: 50px;
-    div.navs {
-      width: $padding - 170px;
+    div#navs {
+      display: block;
+      position: relative;
       float: right;
+      width: $padding - 170px;
       height: 50px;
       button {
         width: fit-content;
       }  
+    }
+    #hamburger {
+      display: none;
     }
   }
 }
