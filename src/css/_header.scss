@@ -1,17 +1,35 @@
 @import "vars";
 
 header {
-  background-image: url(../images/shanghai_park_01.jpg);
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-top: 25px;
+  background-image: url(../images/shanghai_park_main.png);
   background-position: top;
   background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 500px;
-  position: relative;
+  .overlay {
+    position: absolute;
+    top: 30px;
+    right: 150px;
+    width: 150px;
+    height: 60px;
+    font-size: 40px;
+    background-color: #00000088;
+    color: $shanghai-white;
+    font-family: clearlight;
+    line-height: 60px;
+    text-align: center;
+  }
 }
 
-.overlay {
-  background-color: #00000088;
-  color: $shanghai-white;
-  font-family: clearlight;
+
+@media only screen and (min-width: 768px) {
+  header {
+    height: 500px;
+    position: relative;
+    .overlay {
+      right: calc((50vw - #{$padding / 2}) + 200px);
+    }
+  }
 }
