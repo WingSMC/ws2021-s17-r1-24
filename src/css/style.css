@@ -173,34 +173,37 @@ nav div#navs button:hover {
 header {
   position: relative;
   width: 100%;
-  height: 200px;
-  margin-top: 25px;
+  height: 25vw;
   background-image: url(../images/shanghai_park_main.png);
-  background-position: top;
-  background-size: cover;
+  background-position: 50% 0;
+  background-size: 120% auto;
 }
 
 header .overlay {
   position: absolute;
   top: 30px;
-  right: 150px;
-  width: 150px;
-  height: 60px;
-  font-size: 40px;
   background-color: #00000088;
-  color: #ffffff;
-  font-family: clearlight;
-  line-height: 60px;
   text-align: center;
+  font-family: clearlight;
+  color: #ffffff;
+  /*     right: 150px;
+    width: 150px;
+    height: 60px;
+    font-size: 40px;
+    line-height: 60px; */
 }
 
 @media only screen and (min-width: 768px) {
   header {
-    height: 500px;
-    position: relative;
+    margin-top: 10px;
+    height: 31vw;
   }
   header .overlay {
-    right: calc((50vw - 512px) + 200px);
+    width: 260px;
+    height: 110px;
+    line-height: 110px;
+    font-size: 70px;
+    right: calc(50vw - 387px);
   }
 }
 
@@ -219,6 +222,7 @@ header .overlay {
 }
 
 body {
+  min-height: 2000px;
   text-rendering: optimizeLegibility;
   margin: 0;
   width: 100%;

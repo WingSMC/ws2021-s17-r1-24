@@ -3,33 +3,37 @@
 header {
   position: relative;
   width: 100%;
-  height: 200px;
-  margin-top: 25px;
+  height: 25vw;
   background-image: url(../images/shanghai_park_main.png);
-  background-position: top;
-  background-size: cover;
+  background-position: 50% 0;
+  background-size: 120% auto;
   .overlay {
     position: absolute;
     top: 30px;
-    right: 150px;
+    background-color: #00000088;
+    text-align: center;
+    font-family: clearlight;
+    color: $shanghai-white;
+
+/*     right: 150px;
     width: 150px;
     height: 60px;
     font-size: 40px;
-    background-color: #00000088;
-    color: $shanghai-white;
-    font-family: clearlight;
-    line-height: 60px;
-    text-align: center;
+    line-height: 60px; */
   }
 }
 
-
+$overlay-hight: 110px;
 @media only screen and (min-width: 768px) {
   header {
-    height: 500px;
-    position: relative;
+    margin-top: 10px;
+    height: 31vw;
     .overlay {
-      right: calc((50vw - #{$padding / 2}) + 200px);
+      width: 260px;
+      height: $overlay-hight;
+      line-height: $overlay-hight;
+      font-size: 70px;
+      right: calc(50vw - #{$padding / 2 - 125px});
     }
   }
 }

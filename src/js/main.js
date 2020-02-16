@@ -2,14 +2,15 @@
 window.addEventListener("load", init);
 
 function init() {
+    parallax();
     buttonActive();
     toggleNav();
 }
 
 function buttonActive() {
-    let elements = document.querySelectorAll("#navs button");
-    let current = elements[0];
-    elements.forEach(elem => {
+    let current = document.documentElement;
+    document.querySelectorAll("#navs button")
+    .forEach(elem => {
         elem.addEventListener("click", () => {
             current.classList.remove("active");
             current = elem;
@@ -20,7 +21,7 @@ function buttonActive() {
 
 function toggleNav() {
     let hidden = true;
-    let navs = document.getElementById("navs");
+    const navs = document.getElementById("navs");
     document.getElementById("hamburger")
     .addEventListener("click", () => {
         hidden = !hidden;
@@ -29,4 +30,15 @@ function toggleNav() {
             navs.classList.remove("hide")
         ;
     });
+}
+
+function parallax() {
+    const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    const banner = document.getElementById("banner");
+    const scrollEv = () => {
+        banner.style.backgroundPositionY = `${window.scrollY / 2 - 45}px`;
+    };
+    scrollEv();
+    window.addEventListener("scroll", scrollEv);
 }
