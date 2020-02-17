@@ -50,14 +50,19 @@ div.dark-bar {
   display: none;
 }
 
-.logo {
-  height: 40px;
-  margin: 15px;
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  background-color: #ffffff;
+  z-index: 100;
 }
 
-nav {
-  position: relative;
-  height: 70px;
+nav .logo {
+  height: 40px;
+  margin: 15px;
 }
 
 nav #hamburger {
@@ -108,7 +113,7 @@ nav div#navs button {
 nav div#navs button.active {
   background-color: #5dd782;
   color: #ffffff;
-  font-weight: bold;
+  -webkit-text-stroke: thin;
 }
 
 nav div#navs button:hover {
@@ -177,20 +182,21 @@ header {
   background-image: url(../images/shanghai_park_main.png);
   background-position: 50% 0;
   background-size: 120% auto;
+  margin-top: 95px;
 }
 
 header .overlay {
   position: absolute;
-  top: 30px;
+  top: 4vw;
+  right: 15vw;
   background-color: #00000088;
   text-align: center;
   font-family: clearlight;
   color: #ffffff;
-  /*     right: 150px;
-    width: 150px;
-    height: 60px;
-    font-size: 40px;
-    line-height: 60px; */
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+  line-height: 50px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -199,12 +205,21 @@ header .overlay {
     height: 31vw;
   }
   header .overlay {
+    top: 30px;
+    right: calc(50vw - 387px);
     width: 260px;
     height: 110px;
     line-height: 110px;
     font-size: 70px;
-    right: calc(50vw - 387px);
   }
+}
+
+main section h2 {
+  color: #5dd782;
+}
+
+main section img {
+  border-radius: 3px;
 }
 
 @font-face {
@@ -221,12 +236,15 @@ header .overlay {
   display: none;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 2000px;
   text-rendering: optimizeLegibility;
   margin: 0;
   width: 100%;
-  scroll-behavior: smooth;
   background-color: #ffffff;
   font-family: arial-narrow, sans-serif;
   overflow-x: hidden;

@@ -1,16 +1,20 @@
-@import "vars";
-
 div.dark-bar {
   display: none;
 }
 
-.logo {
-  height: 40px;
-  margin: 15px;
-}
 nav {
-  position: relative;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 70px;
+  background-color: $shanghai-white;
+  z-index: 100;
+  
+  .logo {
+    height: 40px;
+    margin: 15px;
+  }
   #hamburger {
     float: right;
     height: 40px;
@@ -49,7 +53,7 @@ nav {
       &.active {
         background-color: $shanghai-green;
         color: $shanghai-white;
-        font-weight: bold;
+        -webkit-text-stroke: thin;
       }
       &:hover {
         background-color: $shanghai-green-dark;
