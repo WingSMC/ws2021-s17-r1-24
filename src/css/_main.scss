@@ -1,17 +1,52 @@
 main {
     section {
-        h2 {
-            color: $shanghai-green;
-        }
-        p {
-
+        $padding-y: 50px;
+        padding-top: $padding-y;
+        padding-bottom: $padding-y;
+        $margin: 5%;
+        div {
+            margin: $margin;
+            h2 {
+                font-size: 32px;
+                color: $shanghai-green;
+                margin-bottom: 30px;
+            }
+            p {
+                margin: 15px 0;
+                word-wrap: break-word;
+            }
         }
         img {
+            width: 90%;
+            margin: $margin;
             border-radius: 3px;
+        }
+        button {
+            background-color: $shanghai-green-dark;
+            color:$shanghai-white;
+            width: 130px;
+            height: 40px;
+            border-radius: 3px;
+            &:active {
+                background-color: $shanghai-green-light;
+            }
         }
     }
 }
 
 @media only screen and (min-width: 768px) {
-    
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    main {
+        section {
+            h2 {
+            }
+            p {
+            }
+            img {
+            }
+        }
+    }
 }

@@ -37,20 +37,16 @@ nav {
     width: calc(100vw - 30px);
     top: 55px;
     left: 15px;
-    background-color: #FFFFFF88;
+    background-color: rgba(255,255,255,0.5);
     z-index: 2;
     button {
       width: 100%;
       height: 40px;
-      border: none;
       background-color: transparent;
       color: $shanghai-gray;
       line-height: 40px;
-      transition-property: color, background-color;
-      transition-duration: .2s;
-      transition-timing-function: ease;
       text-align: left;
-      &.active {
+      &.active, &:active {
         background-color: $shanghai-green;
         color: $shanghai-white;
         -webkit-text-stroke: thin;
@@ -68,10 +64,8 @@ nav {
   div.dark-bar {
     display: flex;
     justify-content: flex-end;
-  
+
     height: 30px;
-    background-color: $shanghai-gray;
-    color: $shanghai-white;
     line-height: 30px;
   }
   nav {
@@ -103,7 +97,7 @@ nav {
       height: 50px;
       button {
         margin: 5px 5px 5px 0;
-        width: fit-content;
+        width: auto;
       }  
     }
     #hamburger {

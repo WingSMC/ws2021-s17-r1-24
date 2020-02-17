@@ -36,9 +36,13 @@ table {
 }
 
 button {
-    outline: none;
+	outline: none;
+	border: none;
+	transition-property: color, background-color;
+	transition-duration: .2s;
+	transition-timing-function: ease;
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }

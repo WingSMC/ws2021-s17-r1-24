@@ -18,15 +18,19 @@
 .hide {
   display: none;
 }
+.dark {
+  background-color: $shanghai-gray;
+  color: $shanghai-white;
+}
+.right {
+  text-align: right;
+}
 
 :root {
   scroll-behavior: smooth;
 }
 
 body {
-  //! DEBUG
-  min-height: 2000px;
-
   text-rendering: optimizeLegibility;
   margin: 0;
   width: 100%;
@@ -40,6 +44,7 @@ body {
 @media only screen and (min-width: 768px) {
   .pushed-in {
     width: 100%;
-    padding: 0 calc(50% - #{$padding / 2});
+    padding-left: calc(50% - #{$padding / 2});
+    padding-right: calc(50% - #{$padding / 2});
   }
 }
