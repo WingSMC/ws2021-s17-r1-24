@@ -97,7 +97,7 @@ nav div#navs {
   width: calc(100vw - 30px);
   top: 55px;
   left: 15px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: 2;
 }
 
@@ -236,6 +236,12 @@ main section img {
   border-radius: 3px;
 }
 
+main section .environment-img {
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
 main section button {
   background-color: #49b56a;
   color: #ffffff;
@@ -248,12 +254,22 @@ main section button:active {
   background-color: #67ee90;
 }
 
+main #gallery {
+  background-color: #eeeeee;
+  text-align: center;
+}
+
 @media only screen and (min-width: 768px) {
   .grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
+  }
+  main section .environment-img {
+    margin: 5%;
+    border-radius: 0;
+    width: 90%;
   }
 }
 

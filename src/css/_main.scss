@@ -1,9 +1,9 @@
+$padding-y: 50px;
+$margin: 5%;
 main {
     section {
-        $padding-y: 50px;
         padding-top: $padding-y;
         padding-bottom: $padding-y;
-        $margin: 5%;
         div {
             margin: $margin;
             h2 {
@@ -21,6 +21,11 @@ main {
             margin: $margin;
             border-radius: 3px;
         }
+        .environment-img {
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
         button {
             background-color: $shanghai-green-dark;
             color:$shanghai-white;
@@ -32,6 +37,10 @@ main {
             }
         }
     }
+    #gallery {
+        background-color: $shanghai-gray-light;
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -41,11 +50,10 @@ main {
     }
     main {
         section {
-            h2 {
-            }
-            p {
-            }
-            img {
+            .environment-img {
+                margin: $margin;
+                border-radius: 0;
+                width: 90%;
             }
         }
     }

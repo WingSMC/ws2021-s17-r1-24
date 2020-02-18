@@ -15,21 +15,23 @@ function buttonActive() {
             current.classList.remove("active");
             current = elem;
             current.classList.add("active");
+            navToggle();
         });
     });
 }
-
+let navToggle;
 function toggleNav() {
     let hidden = true;
     const navs = document.getElementById("navs");
-    document.getElementById("hamburger")
-    .addEventListener("click", () => {
+    navToggle = () => {
         hidden = !hidden;
         hidden ?
             navs.classList.add("hide") :
             navs.classList.remove("hide")
         ;
-    });
+    };
+    document.getElementById("hamburger")
+    .addEventListener("click", navToggle);
 }
 
 function parallax() {
