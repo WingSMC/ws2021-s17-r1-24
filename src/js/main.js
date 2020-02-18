@@ -1,12 +1,11 @@
-
-window.addEventListener("load", init);
-
 function init() {
     parallax();
     buttonActive();
     toggleNav();
+    form();
     fetchJSON();
 }
+window.addEventListener("load", init);
 
 function buttonActive() {
     let current = document.documentElement;
@@ -16,7 +15,7 @@ function buttonActive() {
             current.classList.remove("active");
             current = elem;
             current.classList.add("active");
-            navToggle();
+            navToggle(); // hide mobile menu
         });
     });
 }
@@ -42,6 +41,18 @@ function parallax() {
     };
     scrollEv(); // setup
     window.addEventListener("scroll", scrollEv);
+}
+
+function form() {
+    let fnspan = document.getElementById("firstname-reply");
+    let feedback = document.getElementById("feedback");
+    let form = document.getElementById("msg-form");
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        fnspan.innerText = document.getElementById("first-name").value;
+        feedback.classList.remove("hide");
+        form.classList.add("hide");
+    });
 }
 
 function fetchJSON() {

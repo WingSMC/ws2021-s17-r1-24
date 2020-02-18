@@ -254,24 +254,28 @@ main section > div p {
   word-wrap: break-word;
 }
 
-main section form {
-  margin: 5%;
-}
-
 main section form input, main section form textarea {
   width: 100%;
-  border: #d5d5d5 2px solid;
+  border: #d5d5d5 1px solid;
   border-radius: 3px;
   margin-top: 10px;
   margin-bottom: 20px;
   background-color: #ecfaf0;
+  padding: 10px 10px;
+  color: #888888;
+  font-family: arial-narrow;
+  font-size: 1rem;
 }
 
 main section form input {
-  height: 30px;
+  height: 35px;
 }
 
-main section img {
+main section form textarea {
+  resize: vertical;
+}
+
+main section > img {
   width: 90%;
   margin: 5%;
   border-radius: 3px;
@@ -289,16 +293,11 @@ main section button:active {
   background-color: #67ee90;
 }
 
-main #gallery {
-  background-color: #eeeeee;
-  text-align: center;
-}
-
-main #gallery .gallery-grid {
+main section .gallery-grid {
   margin: 0;
 }
 
-main #gallery .gallery-grid div {
+main section .gallery-grid div {
   width: 100%;
   height: 50vw;
   -webkit-transition: -webkit-filter 0.2s ease-out;
@@ -313,11 +312,15 @@ main #gallery .gallery-grid div {
   margin: 2vw 0;
 }
 
-main #gallery .gallery-grid div:hover {
+main section .gallery-grid div:hover {
   -webkit-animation: imgHover .3s ease-out;
           animation: imgHover .3s ease-out;
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
+}
+
+main section #map {
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -332,7 +335,7 @@ main #gallery .gallery-grid div:hover {
     border-radius: 0;
     width: 90%;
   }
-  main #gallery .gallery-grid {
+  main section .gallery-grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 25% 25% 25% 25%;
@@ -340,7 +343,7 @@ main #gallery .gallery-grid div:hover {
     -ms-grid-rows: 33.33% 33.33% 33.33%;
         grid-template-rows: 33.33% 33.33% 33.33%;
   }
-  main #gallery .gallery-grid div {
+  main section .gallery-grid div {
     width: 88%;
     height: 130px;
     margin: 10px 6%;
@@ -366,6 +369,11 @@ main #gallery .gallery-grid div:hover {
   color: #ffffff;
 }
 
+.gray {
+  background-color: #eeeeee;
+  text-align: center;
+}
+
 .highlighted {
   color: #5dd782;
 }
@@ -378,13 +386,37 @@ main #gallery .gallery-grid div:hover {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: #49b56a;
+}
+
+a:hover {
+  color: #5dd782;
+}
+
 body {
   text-rendering: optimizeLegibility;
   margin: 0;
   width: 100%;
   background-color: #ffffff;
+  color: #333333;
   font-family: arial-narrow, sans-serif;
   overflow-x: hidden;
+}
+
+footer {
+  padding: 50px 3vw;
+  text-align: center;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer hr {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
 }
 
 @media only screen and (min-width: 768px) {
@@ -392,6 +424,14 @@ body {
     width: 100%;
     padding-left: calc(50% - 512px);
     padding-right: calc(50% - 512px);
+  }
+  footer hr {
+    -webkit-transform: none;
+            transform: none;
+    margin: 20px;
+  }
+  footer div.legal {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

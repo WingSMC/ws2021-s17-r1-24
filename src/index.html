@@ -31,6 +31,7 @@
                 <a href="#flats"><button>FLATS</button></a>
                 <a href="#environments"><button>ENVIRONMENTS</button></a>
                 <a href="#gallery"><button>GALLERY</button></a>
+                <!-- <a href="#gallery"><button>DEVELOPER</button></a> -->
                 <a href="#contact"><button>CONTACT</button></a>
                 <a href="#map"><button>MAP</button></a>
             </div>
@@ -69,7 +70,7 @@
             </div>
             <img class="environment-img" src="./images/shanghai_park_environments.png" alt="Environment">
         </section>
-        <section id="gallery" class="pushed-in">
+        <section class="pushed-in gray">
             <div>
                 <h2>Gallery</h2>
                 <div class="gallery-grid">
@@ -95,27 +96,37 @@
                 <p>Email: <a href="mailto:info@shanghaipark.hu" style="text-decoration: none; color: #333333;">info@shanghaipark.hu</a></p>
                 <p>Phone: <span class="highlighted">+36 1 555 5555</span></p>
             </div>
-            <form action="post" netlify>
-                <label for="first-name">First Name</label><br>
-                <input type="text" name="first-name" id="first-name"><br>
-                <label for="last-name">Last Name</label><br>
-                <input type="text" name="last-name" id="last-name"><br>
-                <label for="email">E-mail</label><br>
-                <input type="email" name="email" id="email"><br>
-                <label for="phone">Phone</label><br>
-                <input type="tel" name="phone" id="phone"><br>
-                <label for="msg">Message</label><br>
-                <textarea name="msg" id="msg" rows="5"></textarea><br>
-                <button type="button">Send Message&nbsp;&nbsp;<i class="fas fa-angle-right" style="transform: scale(1.5);"></i></button>
-            </form>
+            <div>
+                <div id="feedback" class="hide">Dear <span id="firstname-reply"></span>! Thank you for your message. We will contact you as soon as possible.</div>
+                <form action="post" id="msg-form" netlify>
+                    <label for="first-name">First Name</label><br>
+                    <input type="text" name="first-name" id="first-name" required><br>
+                    <label for="last-name">Last Name</label><br>
+                    <input type="text" name="last-name" id="last-name" required><br>
+                    <label for="email">E-mail</label><br>
+                    <input type="email" name="email" id="email" required><br>
+                    <label for="phone">Phone</label><br>
+                    <input type="tel" name="phone" id="phone" required><br>
+                    <label for="msg">Message</label><br>
+                    <textarea name="msg" id="msg" rows="5" required></textarea><br>
+                    <button type="submit">Send Message&nbsp;&nbsp;<i class="fas fa-angle-right" style="transform: scale(1.5);"></i></button>
+                </form>
+            </div>
         </section>
-        <section id="map" class="pushed-in">
-
+        <section class="map pushed-in gray">
+            <div>
+                <h2>Map</h2>
+                <img id="map" src="./images/shanghai_park_map.png" alt="">
+            </div>
         </section>
     </main>
-    <footer>
+    <footer class="pushed-in dark">
         <p>Copyright &copy; 2020 Shanghai Park</p>
         <hr>
+        <div class="legal hide">
+            <p>We handle your personal data according to the <a href="#">Privacy Policy</a>.</p>
+            <p>If you would like to get information about which data we store or if you would like us to delete your data, please contact us at <a href="mailto:info@shanghaipark.hu">info@shanghaipark.hu</a>.</p>
+        </div>
     </footer>
 </body>
 </html>

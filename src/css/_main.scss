@@ -26,20 +26,26 @@ main {
             }
         }
         form {
-            margin: $margin;
             input, textarea {
                 width: 100%;
-                border: darken($color: $shanghai-gray-light, $amount: 10) 2px solid;
+                border: darken($color: $shanghai-gray-light, $amount: 10) 1px solid;
                 border-radius: $border-rad;
                 margin-top: 10px;
                 margin-bottom: 20px;
                 background-color: lighten($color: $shanghai-green, $amount: 35);
+                padding: 10px 10px;
+                color: darken($color: $shanghai-gray-light, $amount: 40);
+                font-family: arial-narrow;
+                font-size: 1rem;
             }
             input {
-                height: 30px;
+                height: 35px;
+            }
+            textarea {
+                resize: vertical;
             }
         }
-        img {
+        > img {
             width: 90%;
             margin: $margin;
             border-radius: $border-rad;
@@ -54,10 +60,6 @@ main {
                 background-color: $shanghai-green-light;
             }
         }
-    }
-    #gallery {
-        background-color: $shanghai-gray-light;
-        text-align: center;
         .gallery-grid {
             margin: 0;
             div {
@@ -75,6 +77,9 @@ main {
                 }
             }
         }
+        #map {
+            width: 100%;
+        }
     }
 }
 
@@ -90,8 +95,6 @@ main {
                 border-radius: 0;
                 width: 90%;
             }
-        }
-        #gallery {
             .gallery-grid {
                 display: grid;
                 grid-template-columns: 25% 25% 25% 25%;
