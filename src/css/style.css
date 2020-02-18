@@ -210,22 +210,44 @@ header .overlay {
   }
 }
 
+@-webkit-keyframes imgHover {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@keyframes imgHover {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
 main section {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-main section div {
+main section > div {
   margin: 5%;
 }
 
-main section div h2 {
+main section > div h2 {
   font-size: 32px;
   color: #5dd782;
   margin-bottom: 30px;
 }
 
-main section div p {
+main section > div p {
   margin: 15px 0;
   word-wrap: break-word;
 }
@@ -259,6 +281,31 @@ main #gallery {
   text-align: center;
 }
 
+main #gallery .gallery-grid {
+  margin: 0;
+}
+
+main #gallery .gallery-grid div {
+  width: 100%;
+  height: 130px;
+  -webkit-transition: -webkit-filter 0.2s ease-out;
+  transition: -webkit-filter 0.2s ease-out;
+  transition: filter 0.2s ease-out;
+  transition: filter 0.2s ease-out, -webkit-filter 0.2s ease-out;
+  background-position: center;
+  background-size: cover;
+  border-radius: 3px;
+  -webkit-filter: grayscale(0.7);
+          filter: grayscale(0.7);
+}
+
+main #gallery .gallery-grid div:hover {
+  -webkit-animation: imgHover .3s ease-out;
+          animation: imgHover .3s ease-out;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
 @media only screen and (min-width: 768px) {
   .grid {
     display: -ms-grid;
@@ -270,6 +317,18 @@ main #gallery {
     margin: 5%;
     border-radius: 0;
     width: 90%;
+  }
+  main #gallery .gallery-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 25% 25% 25%;
+        grid-template-columns: 25% 25% 25% 25%;
+    -ms-grid-rows: 33.33% 33.33% 33.33%;
+        grid-template-rows: 33.33% 33.33% 33.33%;
+  }
+  main #gallery .gallery-grid div {
+    width: 88%;
+    margin: 10px 6%;
   }
 }
 
