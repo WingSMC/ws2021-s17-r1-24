@@ -3,6 +3,7 @@ function init() {
     buttonActive();
     toggleNav();
     form();
+    map();
     fetchJSON();
 }
 window.addEventListener("load", init);
@@ -52,6 +53,38 @@ function form() {
         fnspan.innerText = document.getElementById("first-name").value;
         feedback.classList.remove("hide");
         form.classList.add("hide");
+    });
+}
+
+function map() {
+    let images = [
+        "./images/shanghai_park_map-.png",
+        "./images/shanghai_park_map.png",
+        "./images/shanghai_park_map+.png"
+    ];
+    let state = 1;
+    let map = document.getElementById("map");
+    let changeState = (n) => {
+        state += n;
+        map.src = images[state];
+    }
+    let zin = document.getElementById("zoom-in");
+    let zout = document.getElementById("zoom-out");
+    zin.addEventListener("click", () => {
+        if(state < 2) changeState(1);
+        if(state === 2) {
+            zin.disabled = true;
+        }
+        zout.disabled = false;
+    });
+    zout.addEventListener("click", () => {
+        if(state > 0) changeState(-1);
+        if(state === 0) {
+            zout.disabled = true;
+        }
+        zin.disabled = false;
+        console.log(state);
+        
     });
 }
 

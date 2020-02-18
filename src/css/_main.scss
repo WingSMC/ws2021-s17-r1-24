@@ -59,6 +59,20 @@ main {
             &:active {
                 background-color: $shanghai-green-light;
             }
+            &.zoom {
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+                position: absolute;
+                right: 20px;
+                &#zoom-in {
+                    top: 20px;
+                }
+                &#zoom-out{
+                    top: 80px;
+                }
+            }
         }
         .gallery-grid {
             margin: 0;

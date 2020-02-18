@@ -293,6 +293,23 @@ main section button:active {
   background-color: #67ee90;
 }
 
+main section button.zoom {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+}
+
+main section button.zoom#zoom-in {
+  top: 20px;
+}
+
+main section button.zoom#zoom-out {
+  top: 80px;
+}
+
 main section .gallery-grid {
   margin: 0;
 }
