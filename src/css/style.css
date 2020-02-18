@@ -350,6 +350,11 @@ main section #map {
   }
 }
 
+.modal {
+  width: 100vw;
+  height: 100vh;
+}
+
 @font-face {
   font-family: arial-narrow;
   src: url("../fonts/arial-narrow.ttf");

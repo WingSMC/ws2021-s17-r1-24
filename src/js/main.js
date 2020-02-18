@@ -55,13 +55,13 @@ function form() {
     });
 }
 
-function fetchJSON() {
-    fetch("./data/shanghai_park_flats.json")
+async function fetchJSON() {
+    let object;
+    await fetch("./data/shanghai_park_flats.json")
     .then(res => res.json())
-    .then(res => {
-                
-    })
-    .catch((err)=> {
-        console.error(err);
-    });
+    .then(res => object = res)
+    .catch(err => console.error(err));
+    console.log(object);
+    
+    let table = document.getElementById("flats-table");
 }
