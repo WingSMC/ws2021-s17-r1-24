@@ -69,39 +69,41 @@ nav {
     line-height: 30px;
   }
   nav {
-    position: static;
-    .logo-before {
-      content: ' ';
-      display: block;
-      position: absolute;
-      background-color: $shanghai-white;
-      width: 180px;
-      height: 80px;
-      top: 0;
-      transform: skew(-15deg) translateX(-15px);
-    }
-    .logo {
-      position: absolute;
-      top: 0px;
-      height: 80px;
-      margin: 0px;
-    }
     height: 50px;
-    div#navs {
-      display: block;
+    position: static;
+    .nav-container {
       position: relative;
-      top: 0;
-      left: 0;
-      float: right;
-      width: $padding - 170px;
-      height: 50px;
-      button {
-        margin: 5px 5px 5px 0;
+      .logo-before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        background-color: $shanghai-white;
+        width: 180px;
+        height: 80px;
+        top: -30px;
+        transform: skew(-15deg) translateX(-15px);
+      }
+      .logo {
+        position: absolute;
+        top: -30px;
+        height: 80px;
+        margin: 0px;
+      }
+      div#navs {
+        display: block;
+        top: auto;
+        left: 165px;
+        float: left;
         width: auto;
-      }  
-    }
-    #hamburger {
-      display: none;
+        height: 50px;
+        button {
+          margin: 5px 5px 5px 0;
+          width: auto;
+        }  
+      }
+      #hamburger {
+        display: none;
+      }
     }
   }
 }

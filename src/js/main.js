@@ -5,6 +5,7 @@ function init() {
     parallax();
     buttonActive();
     toggleNav();
+    fetchJSON();
 }
 
 function buttonActive() {
@@ -35,12 +36,21 @@ function toggleNav() {
 }
 
 function parallax() {
-    const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     const banner = document.getElementById("banner");
     const scrollEv = () => {
         banner.style.backgroundPositionY = `${window.scrollY / 2 - 45}px`;
     };
-    scrollEv();
+    scrollEv(); // setup
     window.addEventListener("scroll", scrollEv);
+}
+
+function fetchJSON() {
+    fetch("./data/shanghai_park_flats.json")
+    .then(res => res.json())
+    .then(res => {
+                
+    })
+    .catch((err)=> {
+        console.error(err);
+    });
 }
