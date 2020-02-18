@@ -88,17 +88,34 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="pushed-in">
-
+        <section id="contact" class="pushed-in grid">
+            <div>
+                <h2>Contact</h2>
+                <p>Skills str 36<br>Budapest</p>
+                <p>Email: <a href="mailto:info@shanghaipark.hu" style="text-decoration: none; color: #333333;">info@shanghaipark.hu</a></p>
+                <p>Phone: <span class="highlighted">+36 1 555 5555</span></p>
+            </div>
+            <form action="post" netlify>
+                <label for="first-name">First Name</label><br>
+                <input type="text" name="first-name" id="first-name"><br>
+                <label for="last-name">Last Name</label><br>
+                <input type="text" name="last-name" id="last-name"><br>
+                <label for="email">E-mail</label><br>
+                <input type="email" name="email" id="email"><br>
+                <label for="phone">Phone</label><br>
+                <input type="tel" name="phone" id="phone"><br>
+                <label for="msg">Message</label><br>
+                <textarea name="msg" id="msg" rows="5"></textarea><br>
+                <button type="button">Send Message&nbsp;&nbsp;<i class="fas fa-angle-right" style="transform: scale(1.5);"></i></button>
+            </form>
         </section>
         <section id="map" class="pushed-in">
 
         </section>
     </main>
-    <!--<footer>
-        <!-- copy & privacy policy -- >
+    <footer>
         <p>Copyright &copy; 2020 Shanghai Park</p>
         <hr>
-    </footer> -->
+    </footer>
 </body>
 </html>

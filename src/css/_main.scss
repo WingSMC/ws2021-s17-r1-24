@@ -8,6 +8,7 @@
 
 $padding-y: 50px;
 $margin: 5%;
+$border-rad: 3px;
 main {
     section {
         padding-top: $padding-y;
@@ -24,22 +25,31 @@ main {
                 word-wrap: break-word;
             }
         }
+        form {
+            margin: $margin;
+            input, textarea {
+                width: 100%;
+                border: darken($color: $shanghai-gray-light, $amount: 10) 2px solid;
+                border-radius: $border-rad;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                background-color: lighten($color: $shanghai-green, $amount: 35);
+            }
+            input {
+                height: 30px;
+            }
+        }
         img {
             width: 90%;
             margin: $margin;
-            border-radius: 3px;
-        }
-        .environment-img {
-            width: 100%;
-            margin: 0;
-            border-radius: 0;
+            border-radius: $border-rad;
         }
         button {
             background-color: $shanghai-green-dark;
             color:$shanghai-white;
             width: 130px;
-            height: 40px;
-            border-radius: 3px;
+            height: 35px;
+            border-radius: $border-rad;
             &:active {
                 background-color: $shanghai-green-light;
             }
@@ -56,7 +66,7 @@ main {
                 transition: filter 0.2s ease-out;
                 background-position: center;
                 background-size: cover;
-                border-radius: 3px;
+                border-radius: $border-rad;
                 filter: grayscale(.7);
                 margin: 2vw 0;
                 &:hover {
