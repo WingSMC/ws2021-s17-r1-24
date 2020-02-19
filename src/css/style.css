@@ -398,7 +398,6 @@ main section #map {
   z-index: 2;
   background-color: transparent;
   border: none;
-  font-size: 50px;
   color: #ffffff;
 }
 
@@ -411,6 +410,24 @@ main section #map {
   right: 40px;
   width: 50px;
   height: 50px;
+  font-size: 50px;
+}
+
+#slides .step {
+  top: 50vh;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 70px;
+  width: 100px;
+  height: 100px;
+}
+
+#slides .step#prev {
+  left: 30px;
+}
+
+#slides .step#next {
+  right: 30px;
 }
 
 @font-face {

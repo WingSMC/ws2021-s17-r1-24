@@ -105,12 +105,21 @@ function modal() {
     });
     let galleryPics = document.querySelectorAll(".gallery-grid div"); 
     let state = 0;
+    let setState = (newState) => {
+        if(newState < 1 || newState > galleryPics.length) return;
+        state = newState;
+        modal.firstElementChild.style.backgroundImage = `url(./images/shanghai_park_${state > 9 ? state : `0${state}`}.jpg)`
+    }
     
     galleryPics.forEach((pic, k) => pic.addEventListener("click", ()=> {
-        let i = k + 1;
-        modal.firstElementChild.style.backgroundImage = `url(./images/shanghai_park_${i > 9 ? i : `0${i}`}.jpg)`
+        setState(k+1);
         modal.classList.remove("hide");
-        state = k;
     }));
+    document.getElementById("prev").addEventListener("click", ()=> {
+        setState(state-1);
+    });
+    document.getElementById("next").addEventListener("click", ()=> {
+        setState(state+1);
+    });
     
 }
