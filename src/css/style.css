@@ -317,6 +317,10 @@ main section button.zoom#zoom-out {
   top: 80px;
 }
 
+main section button.zoom:disabled {
+  background-color: #eeeeee;
+}
+
 main section .gallery-grid {
   margin: 0;
 }

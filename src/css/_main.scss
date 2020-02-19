@@ -76,6 +76,9 @@ main {
                 &#zoom-out{
                     top: 80px;
                 }
+                &:disabled {
+                    background-color: $shanghai-gray-light;
+                }
             }
         }
         .gallery-grid {
