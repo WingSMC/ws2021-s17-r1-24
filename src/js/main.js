@@ -107,8 +107,8 @@ function modal() {
     let state = 0;
     
     galleryPics.forEach((pic, k) => pic.addEventListener("click", ()=> {
-        ++k;
-        modal.firstElementChild.style.backgroundImage = `url(./images/shanghai_park_${k > 9 ? k : `0${k}`}.jpg)`
+        let i = k + 1;
+        modal.firstElementChild.style.backgroundImage = `url(./images/shanghai_park_${i > 9 ? i : `0${i}`}.jpg)`
         modal.classList.remove("hide");
         state = k;
     }));

@@ -383,7 +383,7 @@ main section #map {
           justify-content: center;
 }
 
-#slide {
+#slides #slide {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   width: 80%;
@@ -393,13 +393,24 @@ main section #map {
   background-repeat: no-repeat;
 }
 
-#close {
+#slides button {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
   z-index: 2;
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  color: #ffffff;
+}
+
+#slides button:active {
+  color: #5dd782;
+}
+
+#slides #close {
+  top: 20px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 @font-face {
