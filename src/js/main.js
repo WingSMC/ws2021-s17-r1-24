@@ -120,6 +120,22 @@ async function fetchJSON() {
     .then(res => object = res)
     .catch(err => console.error(err));
 
+    let floorArray = [];
+    object = Object.keys(object).forEach(f => {
+        let roomArray = [];
+
+        Object.keys(object[f]).forEach(d => {
+            if (typeof object[f][d].reserved !== "boolean") {
+                object[f][d].reserved = Boolean(object[f][d].reserved);
+            }
+
+            roomArray.push(object[f][d]);            
+        });
+        floorArray.push(roomArray);
+    });
+    
+
+
     let table = document.getElementById("flats-table");
     document.getElementById("flats-modal-toggle")
     .addEventListener("click", () => {
