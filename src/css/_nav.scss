@@ -37,15 +37,17 @@ nav {
     width: calc(100vw - 30px);
     top: 55px;
     left: 15px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: transparentize($color: $shanghai-white, $amount: 0.2);
     z-index: 2;
-    button {
+    a {
+      display: inline-block;
       width: 100%;
       height: 40px;
       background-color: transparent;
       color: $shanghai-gray;
       line-height: 40px;
       text-align: left;
+      padding: 0 10px;
       &.active, &:active {
         background-color: $shanghai-green;
         color: $shanghai-white;
@@ -92,14 +94,14 @@ nav {
       div#navs {
         display: block;
         top: auto;
-        left: 165px;
+        left: 170px;
         float: left;
         width: auto;
         height: 50px;
-        button {
+        a {
           margin: 5px 5px 5px 0;
           width: auto;
-        }  
+        }
       }
       #hamburger {
         display: none;

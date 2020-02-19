@@ -25,6 +25,11 @@ main {
                 word-wrap: break-word;
             }
         }
+        
+        .environment-img {
+            margin: 0;
+            width: 100%;
+        }
         form {
             input, textarea {
                 width: 100%;
@@ -32,7 +37,7 @@ main {
                 border-radius: $border-rad;
                 margin-top: 10px;
                 margin-bottom: 20px;
-                background-color: lighten($color: $shanghai-green, $amount: 35);
+                background-color: $shanghai-gray-light;
                 padding: 10px 10px;
                 color: darken($color: $shanghai-gray-light, $amount: 40);
                 font-family: arial-narrow;

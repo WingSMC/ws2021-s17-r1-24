@@ -1,18 +1,19 @@
+(function(){
 function init() {
     parallax();
     buttonActive();
     toggleNav();
-    modal();
+    imgModal();
     form();
     map();
     fetchJSON();
 }
 window.addEventListener("load", init);
-
+//#region Functions
 let navToggle;
 function buttonActive() {
     let current = document.documentElement;
-    document.querySelectorAll("#navs button")
+    document.querySelectorAll("#navs a")
     .forEach(elem => {
         elem.addEventListener("click", () => {
             current.classList.remove("active");
@@ -36,6 +37,7 @@ function toggleNav() {
     .addEventListener("click", navToggle);
 }
 
+// js->css
 function parallax() {
     const banner = document.getElementById("banner");
     const scrollEv = () => {
@@ -44,61 +46,7 @@ function parallax() {
     scrollEv(); // setup
     window.addEventListener("scroll", scrollEv);
 }
-
-function form() {
-    let fnspan = document.getElementById("firstname-reply");
-    let feedback = document.getElementById("feedback");
-    let form = document.getElementById("msg-form");
-    form.addEventListener("submit", e => {
-        e.preventDefault();
-        fnspan.innerText = document.getElementById("first-name").value;
-        feedback.classList.remove("hide");
-        form.classList.add("hide");
-    });
-}
-
-function map() {
-    let images = [
-        "./images/shanghai_park_map-.png",
-        "./images/shanghai_park_map.png",
-        "./images/shanghai_park_map+.png"
-    ];
-    let state = 1;
-    let map = document.getElementById("map");
-    let changeState = (n) => {
-        state += n;
-        map.src = images[state];
-    }
-    let zin = document.getElementById("zoom-in");
-    let zout = document.getElementById("zoom-out");
-    zin.addEventListener("click", () => {
-        if(state < 2) changeState(1);
-        if(state === 2) {
-            zin.disabled = true;
-        }
-        zout.disabled = false;
-    });
-    zout.addEventListener("click", () => {
-        if(state > 0) changeState(-1);
-        if(state === 0) {
-            zout.disabled = true;
-        }
-        zin.disabled = false;        
-    });
-}
-
-async function fetchJSON() {
-    let object;
-    await fetch("./data/shanghai_park_flats.json")
-    .then(res => res.json())
-    .then(res => object = res)
-    .catch(err => console.error(err));
-    console.log(object);
-    
-    let table = document.getElementById("flats-table");
-}
-
-function modal() {
+function imgModal() {
     let modal = document.getElementById("slides");
     document.getElementById("close").addEventListener("click", ()=> {
         modal.classList.add("hide");
@@ -123,3 +71,58 @@ function modal() {
     });
     
 }
+function form() {
+    let fnspan = document.getElementById("firstname-reply");
+    let feedback = document.getElementById("feedback");
+    let form = document.getElementById("msg-form");
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        fnspan.innerText = document.getElementById("first-name").value;
+        feedback.classList.remove("hide");
+        form.classList.add("hide");
+    });
+}
+function map() {
+    let images = ["./images/shanghai_park_map-.png", "./images/shanghai_park_map.png", "./images/shanghai_park_map+.png"]
+    .map((url, i) => {
+        let img = new Image();
+        img.src = url;
+        return img;
+    });
+    let state = 1;
+    let map = document.getElementById("map");
+    let changeState = (n) => {
+        state += n;
+        map.src = images[state].src;
+    }
+    let zin = document.getElementById("zoom-in");
+    let zout = document.getElementById("zoom-out");
+    zin.addEventListener("click", () => {
+        if(state < 2) changeState(1);
+        if(state === 2) {
+            zin.disabled = true;
+        }
+        zout.disabled = false;
+    });
+    zout.addEventListener("click", () => {
+        if(state > 0) changeState(-1);
+        if(state === 0) {
+            zout.disabled = true;
+        }
+        zin.disabled = false;        
+    });
+}
+//#endregion Functions
+async function fetchJSON() {
+    let object;
+    await fetch("./data/shanghai_park_flats.json")
+    .then(res => res.json())
+    .then(res => {
+        console.log(res);
+    })
+    .catch(err => console.error(err));
+    
+    let table = document.getElementById("flats-table");
+}
+
+})()
