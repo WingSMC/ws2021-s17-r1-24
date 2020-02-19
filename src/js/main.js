@@ -117,12 +117,14 @@ async function fetchJSON() {
     let object;
     await fetch("./data/shanghai_park_flats.json")
     .then(res => res.json())
-    .then(res => {
-        console.log(res);
-    })
+    .then(res => object = res)
     .catch(err => console.error(err));
-    
+
     let table = document.getElementById("flats-table");
+    document.getElementById("flats-modal-toggle")
+    .addEventListener("click", () => {
+
+    });
 }
 
 })()
