@@ -1,11 +1,11 @@
 (function(){
 function init() {
     parallax();
+    map();
     buttonActive();
     toggleNav();
     imgModal();
     form();
-    map();
     fetchJSON();
 }
 window.addEventListener("load", init);
