@@ -2,12 +2,14 @@ function init() {
     parallax();
     buttonActive();
     toggleNav();
+    modal();
     form();
     map();
     fetchJSON();
 }
 window.addEventListener("load", init);
 
+let navToggle;
 function buttonActive() {
     let current = document.documentElement;
     document.querySelectorAll("#navs button")
@@ -20,7 +22,6 @@ function buttonActive() {
         });
     });
 }
-let navToggle;
 function toggleNav() {
     let hidden = true;
     const navs = document.getElementById("navs");
@@ -82,9 +83,7 @@ function map() {
         if(state === 0) {
             zout.disabled = true;
         }
-        zin.disabled = false;
-        console.log(state);
-        
+        zin.disabled = false;        
     });
 }
 
@@ -97,4 +96,21 @@ async function fetchJSON() {
     console.log(object);
     
     let table = document.getElementById("flats-table");
+}
+
+function modal() {
+    let modal = document.getElementById("slides");
+    document.getElementById("close").addEventListener("click", ()=> {
+        modal.classList.add("hide");
+    });
+    let galleryPics = document.querySelectorAll(".gallery-grid div"); 
+    let state = 0;
+    
+    galleryPics.forEach((pic, k) => pic.addEventListener("click", ()=> {
+        ++k;
+        modal.firstElementChild.style.backgroundImage = `url(./images/shanghai_park_${k > 9 ? k : `0${k}`}.jpg)`
+        modal.classList.remove("hide");
+        state = k;
+    }));
+    
 }

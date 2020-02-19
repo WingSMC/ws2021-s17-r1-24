@@ -43,8 +43,11 @@
         <div class="overlay">HOMES FOR LIFE</div>
     </header>
     <main>
-        <div id="modal" class="modal hide">
-
+        <div id="slides" class="modal hide">
+            <div id="slide"></div>
+            <button id="close"><i class="far fa-times-circle"></i></button>
+            <button id="prev"></button>
+            <button id="next"></button>
         </div>
         <div id="flats" class="modal hide">
             <table>
@@ -90,7 +93,7 @@
             </div>
             <img class="environment-img" src="./images/shanghai_park_environments.png" alt="Environment">
         </section>
-        <section class="pushed-in gray">
+        <section id="gallery" class="pushed-in gray">
             <div>
                 <h2>Gallery</h2>
                 <div class="gallery-grid">
@@ -118,7 +121,7 @@
             </div>
             <div>
                 <div id="feedback" class="hide">Dear <span id="firstname-reply"></span>! Thank you for your message. We will contact you as soon as possible.</div>
-                <form action="post" id="msg-form" netlify>
+                <form action="post" id="msg-form">
                     <label for="first-name">First Name</label><br>
                     <input type="text" name="first-name" id="first-name" required><br>
                     <label for="last-name">Last Name</label><br>
