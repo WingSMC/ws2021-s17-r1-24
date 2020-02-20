@@ -10,7 +10,22 @@
     justify-content: center;
 }
 #flats-modal {
-    
+    table {
+        background-color: $shanghai-white;
+        width: 90vw;
+        margin: 5vh 5vw;
+        height: 90vh;
+        border-collapse: collapse;
+        border-radius: $border-rad;
+        th, td {
+            border: $shanghai-green 2px solid;
+        }
+        th {
+        }
+        td {
+
+        }
+    }
 }
 #slides {
     #slide {

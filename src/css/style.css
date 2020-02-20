@@ -394,6 +394,19 @@ main section #map {
           justify-content: center;
 }
 
+#flats-modal table {
+  background-color: #ffffff;
+  width: 90vw;
+  margin: 5vh 5vw;
+  height: 90vh;
+  border-collapse: collapse;
+  border-radius: 3px;
+}
+
+#flats-modal table th, #flats-modal table td {
+  border: #5dd782 2px solid;
+}
+
 #slides #slide {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -453,6 +466,10 @@ main section #map {
 
 .hide {
   display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .dark {

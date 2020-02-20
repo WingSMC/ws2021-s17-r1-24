@@ -123,23 +123,37 @@ async function fetchJSON() {
     let floorArray = [];
     object = Object.keys(object).forEach(f => {
         let roomArray = [];
-
         Object.keys(object[f]).forEach(d => {
             if (typeof object[f][d].reserved !== "boolean") {
                 object[f][d].reserved = Boolean(object[f][d].reserved);
             }
-
-            roomArray.push(object[f][d]);            
+            object[f][d].door_number = d;
+            object[f][d].net_area = Number(object[f][d].net_area);
+            object[f][d].sales_area = Number(object[f][d].sales_area);
+            roomArray.push(object[f][d]);
         });
         floorArray.push(roomArray);
     });
-    
-
-
+    console.log(floorArray);
     let table = document.getElementById("flats-table");
+
+    floorArray[0].forEach(d => {
+        table.innerHTML += 
+        `<tr>
+            <td>${d.door_number}</td>
+            <td>${d.rooms}</td>
+            <td>${d.net_area}</td>
+            <td>${d.sales_area}</td>
+            <td>${d.orientation}</td>
+            <td>${d.price_eur}</td>
+        </tr>`;
+    });
+
+
+    let modalBox = document.getElementById("flats-modal")
     document.getElementById("flats-modal-toggle")
     .addEventListener("click", () => {
-
+        modalBox.classList.remove("hide");
     });
 }
 

@@ -19,6 +19,9 @@
 .hide {
   display: none;
 }
+.no-scroll {
+  overflow: hidden;
+}
 .dark {
   background-color: $shanghai-gray;
   color: $shanghai-white;
@@ -83,7 +86,6 @@ footer {
     }
     div.legal {
       display: block;
-  
     }
   }
 }
