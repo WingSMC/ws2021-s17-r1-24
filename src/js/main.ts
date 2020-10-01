@@ -1,4 +1,3 @@
-(function(){
 function init() {
     parallax();
     map();
@@ -13,7 +12,7 @@ window.addEventListener("load", init);
 
 let navToggle;
 function buttonActive() {
-    let current = document.documentElement;
+    let current = null;
     document.querySelectorAll("#navs a")
     .forEach(elem => {
         elem.addEventListener("click", () => {
@@ -147,19 +146,19 @@ async function fetchJSON() {
     });
 }
 
-})()
-
 /**
  * @class TableRenderer
  * @property table {HTMLElement}
  *  */
 class TableRenderer {
+    private table;
+    private tabledata;
     TableRenderer(elem, newdata) {
         this.data(newdata);
         this.table = elem;
     }
     set data(newData) {
-        this._data = newData;
+        this.tabledata = newData;
         this.renderTable();
     }
     renderTable() {
